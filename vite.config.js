@@ -11,7 +11,6 @@ export default defineConfig({
         engineering: resolve(__dirname, 'engineering.html'),
         results: resolve(__dirname, 'results.html'),
         aiTransparency: resolve(__dirname, 'ai-transparency.html'),
-        reflection: resolve(__dirname, 'reflection.html')
       }
     }
   }
