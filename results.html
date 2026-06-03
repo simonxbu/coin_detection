@@ -77,6 +77,77 @@
         </div>
       </section>
 
+
+      <section class="section">
+        <div class="section-head"><div><p class="eyebrow">Results 2 / Demo</p><h2>results2.png 辨識結果</h2></div><p></p></div>
+        <div class="kpi">
+          <div class="kpi-card"><strong>39</strong><span>偵測圓形物件</span></div>
+          <div class="kpi-card"><strong>5</strong><span>5 元硬幣</span></div>
+          <div class="kpi-card"><strong>5</strong><span>10 元硬幣</span></div>
+          <div class="kpi-card"><strong>176</strong><span>範例總金額</span></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="panel">
+          <div class="section-head"><div><p class="eyebrow">Final Detection</p><h2>最終偵測圖</h2></div><p></p></div>
+          <figure class="figure-card"><img src="/images/process/result2.jpg" alt="最終硬幣與代幣偵測結果" /><figcaption></figcaption></figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="panel">
+          <p class="eyebrow">Classification Table</p>
+          <h2>分類與量測結果表</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>ID</th><th>直徑 mm</th><th>尺寸判斷</th><th>HSV</th><th>ORB判斷</th><th>ORB類別</th><th>Good</th><th>Inliers</th><th>InlierRatio</th><th>MeanHam</th><th>Similarity</th><th>最終分類</th><th>真幣?</th><th>原因</th></tr></thead>
+              <tbody>
+                <tr><td>#01</td><td>21.00</td><td>1元</td><td>reject</td><td>ORB不通過</td><td>1元</td><td>4</td><td>4</td><td>1.00</td><td>44.5</td><td>0.52</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#02</td><td>24.00</td><td>不是真幣</td><td>未執行</td><td>ORB不通過</td><td>1元</td><td>4</td><td>4</td><td>1.00</td><td>53.2</td><td>0.52</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#03</td><td>25.50</td><td>10元</td><td>pass</td><td>ORB不通過</td><td>10元</td><td>5</td><td>4</td><td>0.80</td><td>56.0</td><td>0.44</td><td>10元</td><td>是</td><td>直徑符合且HSV未拒絕</td></tr>
+                <tr><td>#04</td><td>25.00</td><td>10元</td><td>pass</td><td>ORB不通過</td><td>10元</td><td>4</td><td>4</td><td>1.00</td><td>58.0</td><td>0.52</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#05</td><td>22.00</td><td>5元</td><td>pass</td><td>ORB不通過</td><td>5元</td><td>5</td><td>4</td><td>0.80</td><td>52.2</td><td>0.44</td><td>5元</td><td>是</td><td>直徑符合且HSV未拒絕</td></tr>
+                <tr><td>#06</td><td>23.50</td><td>不是真幣</td><td>未執行</td><td>ORB不通過</td><td>1元</td><td>4</td><td>4</td><td>1.00</td><td>49.5</td><td>0.52</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#07</td><td>24.50</td><td>不是真幣</td><td>未執行</td><td>ORB不通過</td><td>1元</td><td>4</td><td>4</td><td>1.00</td><td>52.2</td><td>0.52</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#08</td><td>23.50</td><td>不是真幣</td><td>未執行</td><td>ORB不通過</td><td>5元</td><td>4</td><td>4</td><td>1.00</td><td>51.0</td><td>0.52</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#09</td><td>27.50</td><td>50元</td><td>reject</td><td>ORB不通過</td><td>50元</td><td>7</td><td>4</td><td>0.57</td><td>50.0</td><td>0.35</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#10</td><td>22.00</td><td>5元</td><td>pass</td><td>ORB不通過</td><td>5元</td><td>4</td><td>4</td><td>1.00</td><td>53.2</td><td>0.52</td><td>5元</td><td>是</td><td>直徑符合且HSV未拒絕</td></tr>
+                <tr><td>#11</td><td>23.50</td><td>不是真幣</td><td>未執行</td><td>ORB不通過</td><td>5元</td><td>4</td><td>4</td><td>1.00</td><td>56.2</td><td>0.52</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#12</td><td>25.00</td><td>10元</td><td>pass</td><td>ORB不通過</td><td>10元</td><td>4</td><td>4</td><td>1.00</td><td>55.5</td><td>0.52</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#13</td><td>28.00</td><td>50元</td><td>pass</td><td>ORB不通過</td><td>50元</td><td>5</td><td>0</td><td>0.00</td><td>None</td><td>0.00</td><td>50元</td><td>是</td><td>直徑符合且HSV未拒絕</td></tr>
+                <tr><td>#14</td><td>26.00</td><td>10元</td><td>pass</td><td>ORB不通過</td><td>10元</td><td>4</td><td>4</td><td>1.00</td><td>55.0</td><td>0.52</td><td>10元</td><td>是</td><td>直徑符合且HSV未拒絕</td></tr>
+                <tr><td>#15</td><td>23.00</td><td>5元</td><td>pass</td><td>ORB不通過</td><td>5元</td><td>3</td><td>0</td><td>0.00</td><td>None</td><td>0.00</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#16</td><td>20.50</td><td>1元</td><td>pass</td><td>ORB不通過</td><td>1元</td><td>4</td><td>4</td><td>1.00</td><td>45.5</td><td>0.52</td><td>1元</td><td>是</td><td>直徑符合且HSV未拒絕</td></tr>
+                <tr><td>#17</td><td>25.00</td><td>10元</td><td>pass</td><td>ORB不通過</td><td>10元</td><td>1</td><td>0</td><td>0.00</td><td>None</td><td>0.00</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#18</td><td>25.00</td><td>10元</td><td>pass</td><td>ORB不通過</td><td>10元</td><td>3</td><td>0</td><td>0.00</td><td>None</td><td>0.00</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#19</td><td>23.00</td><td>5元</td><td>pass</td><td>ORB不通過</td><td>5元</td><td>3</td><td>0</td><td>0.00</td><td>None</td><td>0.00</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#20</td><td>25.50</td><td>10元</td><td>pass</td><td>ORB不通過</td><td>10元</td><td>4</td><td>4</td><td>1.00</td><td>45.0</td><td>0.52</td><td>10元</td><td>是</td><td>直徑符合且HSV未拒絕</td></tr>
+                <tr><td>#21</td><td>24.50</td><td>不是真幣</td><td>未執行</td><td>ORB不通過</td><td>5元</td><td>4</td><td>4</td><td>1.00</td><td>46.8</td><td>0.52</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#22</td><td>25.00</td><td>10元</td><td>pass</td><td>ORB不通過</td><td>10元</td><td>3</td><td>0</td><td>0.00</td><td>None</td><td>0.00</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#23</td><td>19.50</td><td>1元</td><td>reject</td><td>ORB不通過</td><td>1元</td><td>3</td><td>0</td><td>0.00</td><td>None</td><td>0.00</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#24</td><td>24.50</td><td>不是真幣</td><td>未執行</td><td>ORB不通過</td><td>10元</td><td>4</td><td>4</td><td>1.00</td><td>58.5</td><td>0.52</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#25</td><td>24.50</td><td>不是真幣</td><td>未執行</td><td>ORB不通過</td><td>5元</td><td>4</td><td>4</td><td>1.00</td><td>50.0</td><td>0.52</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#26</td><td>20.50</td><td>1元</td><td>reject</td><td>ORB不通過</td><td>1元</td><td>5</td><td>4</td><td>0.80</td><td>49.8</td><td>0.44</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#27</td><td>24.50</td><td>不是真幣</td><td>未執行</td><td>ORB不通過</td><td>10元</td><td>4</td><td>4</td><td>1.00</td><td>54.2</td><td>0.52</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#28</td><td>21.50</td><td>5元</td><td>pass</td><td>ORB不通過</td><td>5元</td><td>3</td><td>0</td><td>0.00</td><td>None</td><td>0.00</td><td>5元</td><td>是</td><td>直徑符合且HSV未拒絕</td></tr>
+                <tr><td>#29</td><td>24.50</td><td>不是真幣</td><td>未執行</td><td>ORB不通過</td><td>10元</td><td>4</td><td>4</td><td>1.00</td><td>48.5</td><td>0.52</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#30</td><td>25.00</td><td>10元</td><td>pass</td><td>ORB不通過</td><td>10元</td><td>5</td><td>4</td><td>0.80</td><td>48.2</td><td>0.44</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#31</td><td>23.00</td><td>5元</td><td>pass</td><td>ORB不通過</td><td>5元</td><td>3</td><td>0</td><td>0.00</td><td>None</td><td>0.00</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#32</td><td>27.50</td><td>50元</td><td>pass</td><td>ORB不通過</td><td>50元</td><td>4</td><td>4</td><td>1.00</td><td>48.8</td><td>0.52</td><td>50元</td><td>是</td><td>直徑符合且HSV未拒絕</td></tr>
+                <tr><td>#33</td><td>26.00</td><td>10元</td><td>pass</td><td>ORB不通過</td><td>10元</td><td>3</td><td>0</td><td>0.00</td><td>None</td><td>0.00</td><td>10元</td><td>是</td><td>直徑符合且HSV未拒絕</td></tr>
+                <tr><td>#34</td><td>20.50</td><td>1元</td><td>reject</td><td>ORB不通過</td><td>1元</td><td>4</td><td>4</td><td>1.00</td><td>55.5</td><td>0.52</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#35</td><td>22.50</td><td>5元</td><td>pass</td><td>ORB不通過</td><td>5元</td><td>2</td><td>0</td><td>0.00</td><td>None</td><td>0.00</td><td>5元</td><td>是</td><td>直徑符合且HSV未拒絕</td></tr>
+                <tr><td>#36</td><td>26.00</td><td>10元</td><td>pass</td><td>ORB不通過</td><td>10元</td><td>3</td><td>0</td><td>0.00</td><td>None</td><td>0.00</td><td>10元</td><td>是</td><td>直徑符合且HSV未拒絕</td></tr>
+                <tr><td>#37</td><td>22.50</td><td>5元</td><td>pass</td><td>ORB不通過</td><td>5元</td><td>4</td><td>4</td><td>1.00</td><td>53.2</td><td>0.52</td><td>5元</td><td>是</td><td>直徑符合且HSV未拒絕</td></tr>
+                <tr><td>#38</td><td>24.50</td><td>不是真幣</td><td>未執行</td><td>ORB不通過</td><td>5元</td><td>4</td><td>4</td><td>1.00</td><td>51.2</td><td>0.52</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+                <tr><td>#39</td><td>23.00</td><td>5元</td><td>pass</td><td>ORB不通過</td><td>5元</td><td>5</td><td>4</td><td>0.80</td><td>46.0</td><td>0.44</td><td>不是真幣</td><td>否</td><td>直徑/HSV/ORB未能確認為真幣</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       <section class="section">
         <div class="section-head"><div><p class="eyebrow">ROI Gallery</p><h2>單枚硬幣 ROI 裁切</h2></div><p></p></div>
         <div class="gallery">
