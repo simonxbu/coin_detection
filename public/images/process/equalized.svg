@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" role="img" aria-label="Histogram Equalized">
+      <defs>
+        <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feBlend mode="multiply" in2="SourceGraphic"/></filter>
+      </defs>
+      <rect width="800" height="540" fill="#f7f3e8"/>
+      
+        <rect x="90" y="70" width="620" height="400" rx="22" fill="#f4f1e8" stroke="#d8d0bd" stroke-width="4"/>
+        <g opacity="1" filter="url(#grain)">
+          <circle cx="220" cy="185" r="38" fill="#8f8f89" stroke="#484c48" stroke-width="5"/>
+          <circle cx="340" cy="170" r="44" fill="#deded8" stroke="#606560" stroke-width="5"/>
+          <circle cx="472" cy="205" r="41" fill="#7d7d78" stroke="#4a4a46" stroke-width="5"/>
+          <circle cx="262" cy="335" r="42" fill="#d0d0cc" stroke="#535853" stroke-width="5"/>
+          <circle cx="390" cy="336" r="36" fill="#777772" stroke="#42423f" stroke-width="5"/>
+          <circle cx="525" cy="310" r="46" fill="#e1e1db" stroke="#5a5f5a" stroke-width="5"/>
+          <path d="M200 180h42M320 165h44M448 200h47M240 330h42M505 305h46" stroke="#30332f" stroke-width="3" opacity=".65"/>
+        </g>
+      <text x="40" y="46" font-family="Arial, sans-serif" font-size="24" font-weight="900" fill="#1c2420">Histogram Equalized</text>
+    </svg>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="硬幣與代幣影像辨識系統：數位影像處理期末專題多頁式展示網站。" />
+    <title>硬幣與代幣影像辨識系統｜Home</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要內容</a>
+    <header class="site-header">
+      <nav class="navbar" aria-label="主導覽">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span data-project-name>硬幣與代幣影像辨識系統</span></a>
+        <button class="nav-toggle" aria-expanded="false" aria-label="開啟導覽">Menu</button>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="originality.html">Originality</a>
+          <a href="pipeline.html">Pipeline</a>
+          <a href="engineering.html">Engineering</a>
+          <a href="results.html">Results</a>
+          <a href="ai-transparency.html">AI Log</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div>
+          <p class="eyebrow" data-group>第十一組・生活智慧組</p>
+          <h1>硬幣代幣分類。</h1>
+          <p class="lead"></p>
+          <div class="actions">
+            <a class="button" href="pipeline.html">查看處理流程</a>
+            <a class="button secondary" href="results.html">查看成果展示</a>
+          </div>
+          <div class="badge-row" aria-label="使用技術摘要">
+            <span class="badge">Perspective Transform</span>
+            <span class="badge">Histogram Equalization</span>
+            <span class="badge">Canny</span>
+            <span class="badge">Hough Circles</span>
+            <span class="badge">ROI</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="/images/process/result.jpg" alt="最終偵測結果示意圖，硬幣與代幣被圈選並標註分類" />
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Project Overview</p>
+            <h2></h2>
+          </div>
+          <p></p>
+        </div>
+        <div class="grid three">
+          <article class="card">
+            <div class="card-number">01</div>
+            <h3>原始採集證明</h3>
+            <p>展示拍攝現場、原圖、組員討論與資料採集過程。</p>
+          </article>
+          <article class="card">
+            <div class="card-number">02</div>
+            <h3>影像處理流水線</h3>
+            <p>用流程圖與處理前後對比，呈現每個課堂技術在專題中負責的任務。</p>
+          </article>
+          <article class="card">
+            <div class="card-number">03</div>
+            <h3>技術實驗與參數紀錄</h3>
+            <p>記錄 Canny、Gaussian Blur、Hough Circle 等參數，並包含一組效果不佳案例。</p>
+          </article>
+          <article class="card">
+            <div class="card-number">04</div>
+            <h3>成果展示</h3>
+            <p>列出偵測數量、半徑、換算直徑、分類結果與總金額，讓 DEMO 結果可以被檢查。</p>
+          </article>
+          <article class="card">
+            <div class="card-number">05</div>
+            <h3>AI 協作透明度</h3>
+            <p>AI 協助範圍、Prompt / Debug 紀錄連結。</p>
+          </article>
+          <article class="card">
+            <div class="card-number">06</div>
+            <h3> 製作特輯與反思</h3>
+            <p>說明反光、陰影、圓形重疊、代幣樣本不足等限制與未來技術改進。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="panel">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Quick Pipeline</p>
+              <h2>流程圖</h2>
+            </div>
+          </div>
+          <div class="flow" aria-label="專題快速流程">
+            <div class="flow-step"><strong>01 原始影像</strong><span>白紙、框線、硬幣與代幣混合拍攝。</span></div>
+            <div class="flow-step"><strong>02 框線抓取</strong><span>用四個黑點估計紙張平面。</span></div>
+            <div class="flow-step"><strong>03 對比強化</strong><span>灰階、直方圖均衡化、CLAHE。</span></div>
+            <div class="flow-step"><strong>04 圓形偵測</strong><span>Canny 邊緣與 Hough Circle。</span></div>
+            <div class="flow-step"><strong>05 分類輸出</strong><span>ROI 裁切、直徑換算與分類統計。</span></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <strong data-project-name>硬幣與代幣影像辨識系統</strong><br />
+      <span data-members>許博翔、顏畯榤、陳宗揚、游詠捷</span>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

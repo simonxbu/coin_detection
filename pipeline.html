@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pipeline｜硬幣與代幣影像辨識系統</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要內容</a>
+    <header class="site-header"><nav class="navbar" aria-label="主導覽"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span data-project-name>硬幣與代幣影像辨識系統</span></a><button class="nav-toggle" aria-expanded="false" aria-label="開啟導覽">Menu</button><div class="nav-links"><a href="index.html">Home</a><a href="originality.html">Originality</a><a href="pipeline.html">Pipeline</a><a href="engineering.html">Engineering</a><a href="results.html">Results</a><a href="ai-transparency.html">AI Log</a><a href="reflection.html">Reflection</a></div></nav></header>
+    <main id="main">
+      <section class="hero compact">
+        <p class="eyebrow">02 The Pipeline</p>
+        <h1>影像處理流水線</h1>
+        
+      </section>
+
+      <section class="section">
+        <div class="panel">
+          <div class="section-head"><div><p class="eyebrow">Flow Chart</p><h2>完整處理流程圖</h2></div><p></p></div>
+          <div class="flow">
+            <div class="flow-step"><strong>Raw Image</strong>原始 RGB 影像，含白紙、框線與硬幣/代幣。</div>
+            <div class="flow-step"><strong>Black Points</strong>二值化找四角黑點，估計紙張角點。</div>
+            <div class="flow-step"><strong>Perspective</strong>warpPerspective 將畫面拉正。</div>
+            <div class="flow-step"><strong>Enhancement</strong>灰階、直方圖均衡化、CLAHE。</div>
+            <div class="flow-step"><strong>Detection</strong>Gaussian Blur、Canny、Hough Circles。</div>
+          </div>
+          <div class="flow" style="margin-top:14px; grid-template-columns: repeat(4, minmax(0, 1fr));">
+            <div class="flow-step"><strong>Deduplicate</strong>移除重複圓，保留穩定圓心。</div>
+            <div class="flow-step"><strong>ROI</strong>依圓心與半徑裁切單枚硬幣。</div>
+            <div class="flow-step"><strong>Feature</strong>直徑換算，後續加入 HSV / ORB。</div>
+            <div class="flow-step"><strong>Output</strong>分類、統計、輸出展示。</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head"><div><p class="eyebrow">Before / After</p><h2>處理前後對比</h2></div><p></p></div>
+        <div class="grid two">
+          <article class="panel">
+            <h3>1. 框線抓取</h3>
+            <div class="compare"><figure class="figure-card"><img src="/images/process/raw.jpg" alt="原始傾斜影像" /><figcaption>Before：原始拍攝角度傾斜。</figcaption></figure><figure class="figure-card"><img src="/images/process/perspective.png" alt="透視校正後影像" /><figcaption>After：白紙被拉成正視角。</figcaption></figure></div>
+          </article>
+          <article class="panel">
+            <h3>2. 直方圖均衡化</h3>
+            <div class="compare"><figure class="figure-card"><img src="/images/process/equalized1.png
+            " alt="灰階輸入影像" /><figcaption>Before：紋理與背景對比不足。</figcaption></figure><figure class="figure-card"><img src="/images/process/equalized2.png" alt="均衡化後影像" /><figcaption>After：硬幣紋理與明暗差更明顯。</figcaption></figure></div>
+          </article>
+          <article class="panel">
+            <h3>3. Canny 邊緣偵測</h3>
+            <div class="compare"><figure class="figure-card"><img src="/images/process/equalized.png" alt="均衡化後輸入" /><figcaption>Before：待偵測的灰階影像。</figcaption></figure><figure class="figure-card"><img src="/images/process/canny-good.png" alt="Canny 邊緣結果" /><figcaption>After：輪廓與內部紋理邊緣。</figcaption></figure></div>
+          </article>
+          <article class="panel">
+            <h3>4. Hough Circle + ROI</h3>
+            <div class="compare"><figure class="figure-card"><img src="/images/process/hough.png" alt="圓形偵測結果" /><figcaption>Hough Circle：偵測圓心與半徑。</figcaption></figure><figure class="figure-card"><img src="/images/process/roi-03.png" alt="ROI 裁切結果" /><figcaption>ROI：裁切單枚硬幣供分類。</figcaption></figure></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="panel">
+          <p class="eyebrow">Technique Cards</p>
+          <h2>技術清單</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>技術</th><th>目的</th><th>輸入</th><th>輸出</th><th>主要風險</th></tr></thead>
+              <tbody>
+                <tr><td>Gray / HSV</td><td>簡化資料維度，保留亮度或色彩資訊</td><td>RGB 影像</td><td>灰階或 HSV 通道</td><td>只用灰階可能忽略代幣顏色差異</td></tr>
+                <tr><td>Perspective Transform</td><td>修正拍攝角度，建立一致尺度</td><td>四角黑點座標</td><td>正視角白紙影像</td><td>黑點偵測錯誤會造成整張圖歪斜</td></tr>
+                <tr><td>Histogram Equalization / CLAHE</td><td>提升紋理與邊緣可見度</td><td>校正後灰階圖</td><td>對比強化影像</td><td>過度強化會放大雜訊</td></tr>
+                <tr><td>Gaussian Blur</td><td>降低雜訊對 Canny 的影響</td><td>均衡化影像</td><td>平滑影像</td><td>kernel 太大會抹掉圓形邊界</td></tr>
+                <tr><td>Canny Edge</td><td>取得輪廓與梯度邊緣</td><td>平滑灰階圖</td><td>二值邊緣圖</td><td>threshold 太高會漏邊，太低會雜訊多</td></tr>
+                <tr><td>Hough Circle</td><td>以圓心與半徑偵測硬幣</td><td>邊緣/平滑圖</td><td>圓心與半徑</td><td>硬幣重疊或反光可能重複偵測</td></tr>
+                <tr><td>ROI Cropping</td><td>將每枚物件獨立供後續分類</td><td>圓形座標</td><td>單枚硬幣圖</td><td>半徑偏差會裁掉硬幣邊緣</td></tr>
+                <tr><td>ORB / Feature Matching</td><td>預計補足直徑分類不足</td><td>ROI 影像</td><td>特徵點與匹配分數</td><td>反光、模糊會降低匹配穩定度</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><strong data-project-name>硬幣與代幣影像辨識系統</strong></footer><script type="module" src="/src/main.js"></script>
+  </body>
+</html>

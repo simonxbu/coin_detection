@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Originality｜硬幣與代幣影像辨識系統</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要內容</a>
+    <header class="site-header">
+      <nav class="navbar" aria-label="主導覽">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span data-project-name>硬幣與代幣影像辨識系統</span></a>
+        <button class="nav-toggle" aria-expanded="false" aria-label="開啟導覽">Menu</button>
+        <div class="nav-links">
+          <a href="index.html">Home</a><a href="originality.html">Originality</a><a href="pipeline.html">Pipeline</a><a href="engineering.html">Engineering</a><a href="results.html">Results</a><a href="ai-transparency.html">AI Log</a><a href="reflection.html">Reflection</a>
+        </div>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero compact">
+        <div>
+          <p class="eyebrow">01 Originality</p>
+          <h1>影像故事與原始採集證明</h1>
+          
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="grid two">
+          <article class="panel">
+            <p class="eyebrow">Motivation</p>
+            <h2>動機</h2>
+            <p>日常生活中的公共設施、投幣設備與遊戲機台可能同時出現硬幣與代幣。部分代幣在直徑、顏色或紋理上接近 5 元與 10 元硬幣，混雜後會造成分類困難，因此我們希望透過影像處理凸顯輪廓、直徑與表面特徵。</p>
+            <ul class="checklist">
+              <li>待解決問題：硬幣與代幣混在一起時，人工分類容易受反光、角度與尺寸相似影響。</li>
+              <li>核心資料：組員自行拍攝的白紙背景硬幣/代幣影像。</li>
+              <li>預期輸出：偵測每一枚圓形物件並給出分類或待確認標籤。</li>
+            </ul>
+          </article>
+          <article class="panel">
+            <p class="eyebrow">Acquisition Setup</p>
+            <h2>情境</h2>
+            <ul class="checklist">
+              <li>我們預設是一個檢驗是否為台幣的產品，今天用戶將硬幣以不重疊且放在格線裡面的狀況，由三台不同角度(45度、60度和90度)的攝影機進行拍攝，拍攝過後的照片進行影像處理。</li>
+              <li>我們設計一個實驗是假設硬幣是否有邊緣沾黏的情形，以及在三個不同的角度拍攝下比較參數上的不同。</li>
+          
+              
+            </ul>
+            <p class="source-note"></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Backstage Evidence</p>
+            <h2>原始採集證明</h2>
+          </div>
+         
+        </div>
+        <div class="gallery">
+          <figure class="figure-card"><img src="/images/backstage/backstage-01.jpg" alt="拍攝側拍佔位圖" /><figcaption>拍攝側拍：確認背景紙、框線定位與拍攝角度。</figcaption></figure>
+          <figure class="figure-card"><img src="/images/backstage/backstage-02.jpg" alt="組員討論佔位圖" /><figcaption>組員討論：確認流程圖與參數紀錄方式。</figcaption></figure>
+          <figure class="figure-card"><img src="/images/backstage/backstage-03.jpg" alt="程式測試佔位圖" /><figcaption>掃描過程照</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Raw Image Gallery</p>
+            <h2>原始影像</h2>
+          </div>
+         
+        </div>
+        <div class="gallery">
+          <figure class="figure-card"><img src="/images/original/original-01.png" alt="原始影像樣本一" /><figcaption>45度角拍攝</figcaption></figure>
+          <figure class="figure-card"><img src="/images/original/original-02.png" alt="原始影像樣本二" /><figcaption>60度角拍攝</figcaption></figure>
+          <figure class="figure-card"><img src="/images/original/original-03.png" alt="原始影像樣本三" /><figcaption>90度角拍攝</figcaption></figure>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><strong data-project-name>硬幣與代幣影像辨識系統</strong></footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

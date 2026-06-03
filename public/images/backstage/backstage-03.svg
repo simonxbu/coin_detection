@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" role="img" aria-label="程式測試">
+      <defs>
+        <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feBlend mode="multiply" in2="SourceGraphic"/></filter>
+      </defs>
+      <rect width="800" height="540" fill="#f7f3e8"/>
+      <rect x="92" y="70" width="616" height="400" rx="26" fill="#fffdf8" stroke="#d8d0bd" stroke-width="4"/>
+        <circle cx="210" cy="210" r="58" fill="#f0c84b" opacity=".72"/><circle cx="325" cy="205" r="48" fill="#bfc2bd" opacity=".85"/><circle cx="470" cy="225" r="55" fill="#a98f5c" opacity=".75"/>
+        <rect x="150" y="315" width="500" height="58" rx="16" fill="#0b6b4f" opacity=".12"/>
+        <text x="175" y="350" font-family="Arial, sans-serif" font-size="24" font-weight="800" fill="#0b6b4f">程式測試</text>
+        <path d="M120 110h120v72H120zM285 105h220v82H285zM545 108h88v80h-88z" fill="#f6eedc" stroke="#d8d0bd" stroke-width="3"/>
+      <text x="40" y="46" font-family="Arial, sans-serif" font-size="24" font-weight="900" fill="#1c2420">程式測試</text>
+    </svg>
